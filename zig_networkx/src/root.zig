@@ -29,6 +29,9 @@ pub const eigenvector_centrality = @import("algorithms/centrality/eigenvector.zi
 // Components
 pub const connected_components = @import("algorithms/components/connected.zig");
 
+// Minimum Spanning Tree algorithms
+pub const mst = @import("algorithms/mst/root.zig");
+
 // Error types
 pub const NetworkXError = error{
     NodeNotFound,
@@ -62,6 +65,10 @@ pub const connectedComponents = connected_components.connectedComponents;
 pub const numberOfConnectedComponents = connected_components.numberOfConnectedComponents;
 pub const isConnected = connected_components.isConnected;
 
+pub const kruskalMst = mst.kruskalMst;
+pub const primMst = mst.primMst;
+pub const UnionFind = mst.UnionFind;
+
 test {
     // Import all tests
     _ = @import("classes/graph.zig");
@@ -71,4 +78,5 @@ test {
     _ = @import("algorithms/traversal/dfs.zig");
     _ = @import("algorithms/centrality/degree.zig");
     _ = @import("algorithms/components/connected.zig");
+    _ = @import("algorithms/mst/root.zig");
 }

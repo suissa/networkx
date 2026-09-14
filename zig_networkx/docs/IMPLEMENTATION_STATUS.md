@@ -36,12 +36,13 @@ This document tracks the implementation progress of the Zig NetworkX library.
 - ⏳ `bridges` - A ser implementado
 - ⏳ `bipartite` - A ser implementado
 
-### Próximas Implementações
+### Árvore Geradora Mínima (Seção 5 - COMPLETA ✅)
+- ✅ `kruskalMst` - Algoritmo de Kruskal com Union-Find
+- ✅ `primMst` - Algoritmo de Prim com priority queue
+- ✅ `UnionFind` - Estrutura Union-Find otimizada (path compression + union by rank)
+- ✅ `kruskalMsf` - Minimum Spanning Forest para grafos desconectados
 
-#### Seção 5: Árvore Geradora Mínima (MST)
-- [ ] `kruskalMST` - Algoritmo de Kruskal
-- [ ] `primMST` - Algoritmo de Prim
-- [ ] Estrutura Union-Find otimizada
+### Próximas Implementações
 
 #### Seção 6: Fluxo Máximo
 - [ ] `fordFulkerson` - Algoritmo Ford-Fulkerson
@@ -125,8 +126,8 @@ Todos os algoritmos retornam erros apropriados:
 
 ## Próximos Passos
 
-1. Implementar algoritmos MST (Kruskal, Prim)
-2. Implementar algoritmos de fluxo máximo
+1. ✅ Implementar algoritmos MST (Kruskal, Prim) - COMPLETO
+2. Implementar algoritmos de fluxo máximo (Ford-Fulkerson, Edmonds-Karp, Dinic)
 3. Adicionar detecção de ciclos e circuitos eulerianos
 4. Implementar algoritmos de coloração
 5. Adicionar isomorfismo de grafos (VF2)
