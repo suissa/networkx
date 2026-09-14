@@ -32,6 +32,9 @@ pub const connected_components = @import("algorithms/components/connected.zig");
 // Minimum Spanning Tree algorithms
 pub const mst = @import("algorithms/mst/root.zig");
 
+// Flow algorithms
+pub const flow = @import("algorithms/flow/root.zig");
+
 // Error types
 pub const NetworkXError = error{
     NodeNotFound,
@@ -69,6 +72,12 @@ pub const kruskalMst = mst.kruskalMst;
 pub const primMst = mst.primMst;
 pub const UnionFind = mst.UnionFind;
 
+pub const fordFulkerson = flow.fordFulkerson;
+pub const edmondsKarp = flow.edmondsKarp;
+pub const dinic = flow.dinic;
+pub const minCut = flow.minCut;
+pub const FlowNetwork = flow.FlowNetwork;
+
 test {
     // Import all tests
     _ = @import("classes/graph.zig");
@@ -79,4 +88,5 @@ test {
     _ = @import("algorithms/centrality/degree.zig");
     _ = @import("algorithms/components/connected.zig");
     _ = @import("algorithms/mst/root.zig");
+    _ = @import("algorithms/flow/root.zig");
 }
