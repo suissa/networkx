@@ -2,6 +2,11 @@
 # Zig build artifacts
 zig-cache/
 zig-out/
+*.o
+*.obj
+*.so
+*.dylib
+*.dll
 
 # Dependencies
 deps/
