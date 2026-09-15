@@ -35,6 +35,18 @@ pub const mst = @import("algorithms/mst/root.zig");
 // Flow algorithms
 pub const flow = @import("algorithms/flow/root.zig");
 
+// Cycle detection algorithms
+pub const cycles = @import("algorithms/cycles/root.zig");
+
+// Graph coloring algorithms
+pub const coloring = @import("algorithms/coloring/root.zig");
+
+// Clustering coefficients
+pub const clustering = @import("algorithms/clustering/root.zig");
+
+// Subgraph algorithms
+pub const subgraph = @import("algorithms/subgraph/root.zig");
+
 // Error types
 pub const NetworkXError = error{
     NodeNotFound,
@@ -78,6 +90,31 @@ pub const dinic = flow.dinic;
 pub const minCut = flow.minCut;
 pub const FlowNetwork = flow.FlowNetwork;
 
+// Cycle detection re-exports
+pub const hasDirectedCycle = cycles.hasDirectedCycle;
+pub const findDirectedCycle = cycles.findDirectedCycle;
+pub const hasUndirectedCycle = cycles.hasUndirectedCycle;
+pub const findUndirectedCycle = cycles.findUndirectedCycle;
+pub const isEulerian = cycles.isEulerian;
+pub const hasEulerianPath = cycles.hasEulerianPath;
+pub const eulerianCircuit = cycles.eulerianCircuit;
+pub const eulerianPath = cycles.eulerianPath;
+
+// Coloring re-exports
+pub const greedyColor = coloring.greedyColor;
+pub const brelazColor = coloring.brelazColor;
+pub const isValidColoring = coloring.isValidColoring;
+
+// Clustering re-exports
+pub const localClusteringCoefficient = clustering.localClusteringCoefficient;
+pub const averageClusteringCoefficient = clustering.averageClusteringCoefficient;
+pub const globalClusteringCoefficient = clustering.globalClusteringCoefficient;
+
+// Subgraph re-exports
+pub const bronKerbosch = subgraph.bronKerbosch;
+pub const maximalMatching = subgraph.maximalMatching;
+pub const inducedSubgraph = subgraph.inducedSubgraph;
+
 test {
     // Import all tests
     _ = @import("classes/graph.zig");
@@ -89,4 +126,8 @@ test {
     _ = @import("algorithms/components/connected.zig");
     _ = @import("algorithms/mst/root.zig");
     _ = @import("algorithms/flow/root.zig");
+    _ = @import("algorithms/cycles/root.zig");
+    _ = @import("algorithms/coloring/root.zig");
+    _ = @import("algorithms/clustering/root.zig");
+    _ = @import("algorithms/subgraph/root.zig");
 }

@@ -42,28 +42,58 @@ This document tracks the implementation progress of the Zig NetworkX library.
 - ✅ `UnionFind` - Estrutura Union-Find otimizada (path compression + union by rank)
 - ✅ `kruskalMsf` - Minimum Spanning Forest para grafos desconectados
 
+### Fluxo Máximo (Seção 6 - COMPLETA ✅)
+- ✅ `fordFulkerson` - Algoritmo Ford-Fulkerson
+- ✅ `edmondsKarp` - Algoritmo Edmonds-Karp (Ford-Fulkerson com BFS)
+- ✅ `dinic` - Algoritmo de Dinic (mais eficiente)
+- ✅ `minCut` - Corte mínimo (Teorema Max-Flow Min-Cut)
+- ✅ `FlowNetwork` - Estrutura para redes de fluxo
+
+### Ciclos e Eulerianos (Seção 7 - COMPLETA ✅)
+- ✅ `hasDirectedCycle` - Detecção de ciclos em grafos direcionados
+- ✅ `findDirectedCycle` - Encontra ciclo em grafo direcionado
+- ✅ `hasUndirectedCycle` - Detecção de ciclos em grafos não direcionados
+- ✅ `findUndirectedCycle` - Encontra ciclo em grafo não direcionado
+- ✅ `isEulerian` - Verifica se grafo é euleriano
+- ✅ `hasEulerianPath` - Verifica se existe caminho euleriano
+- ✅ `eulerianCircuit` - Encontra circuito euleriano (Algoritmo de Hierholzer)
+- ✅ `eulerianPath` - Encontra caminho euleriano
+
+### Coloração e Agrupamento (Seção 8 - COMPLETA ✅)
+- ✅ `greedyColor` - Coloração gulosa com múltiplas estratégias
+- ✅ `welshPowellColor` - Coloração Welsh-Powell (grau decrescente)
+- ✅ `brelazColor` - Algoritmo DSatur/Brelaz (mais preciso)
+- ✅ `isValidColoring` - Valida coloração
+- ✅ `localClusteringCoefficient` - Coeficiente de agrupamento local
+- ✅ `averageClusteringCoefficient` - Coeficiente médio
+- ✅ `globalClusteringCoefficient` - Coeficiente global (transitividade)
+- ✅ `clusteringCoefficients` - Coeficientes para todos os nós
+
+### Subgrafos e Isomorfismo (Seção 9 - PARCIALMENTE COMPLETA ✅)
+- ✅ `bronKerbosch` - Algoritmo Bron-Kerbosch para cliques maximais
+- ✅ `findLargestClique` - Encontra maior clique
+- ✅ `isClique` - Verifica se conjunto é clique
+- ✅ `greedyMatching` - Emparelhamento guloso
+- ✅ `maximalMatching` - Emparelhamento maximal
+- ✅ `isValidMatching` - Valida emparelhamento
+- ✅ `inducedSubgraph` - Subgrafo induzido por nós
+- ✅ `edgeSubgraph` - Subgrafo induzido por arestas
+- ✅ `copyGraph` - Cópia de grafo
+- ✅ `complement` - Grafo complementar
+- ⏳ `vf2Isomorphism` - A ser implementado (Algoritmo VF2)
+
 ### Próximas Implementações
 
-#### Seção 6: Fluxo Máximo
-- [ ] `fordFulkerson` - Algoritmo Ford-Fulkerson
-- [ ] `edmondsKarp` - Algoritmo Edmonds-Karp
-- [ ] `dinic` - Algoritmo de Dinic
-- [ ] `minCut` - Corte mínimo
-
-#### Seção 7: Ciclos e Torneio
-- [ ] `findCycle` - Encontrar ciclos
-- [ ] `isEulerian` - Verificar se é euleriano
-- [ ] `eulerianCircuit` - Circuito euleriano
-
-#### Seção 8: Coloração e Agrupamento
-- [ ] `greedyColor` - Coloração gulosa
-- [ ] `localClusteringCoefficient` - Coeficiente de agrupamento local
-- [ ] `globalClusteringCoefficient` - Coeficiente de agrupamento global
-
-#### Seção 9: Isomorfismo e Subgrafos
-- [ ] `vf2Isomorphism` - Algoritmo VF2
-- [ ] `maximalCliques` - Cliques maximais
-- [ ] `matching` - Emparelhamentos
+#### Seção 10: Otimizações e Funcionalidades Adicionais
+- [ ] Medidas de distância (diâmetro, raio, excentricidade)
+- [ ] Assortatividade
+- [ ] Núcleos de grafos (k-core)
+- [ ] Componentes fortemente conexos (Tarjan/Kosaraju)
+- [ ] Pontos de articulação e pontes
+- [ ] Grafos bipartidos
+- [ ] PageRank e Katz centrality
+- [ ] Documentação completa da API
+- [ ] Exemplos abrangentes
 
 #### Seção 10: Otimizações e Funcionalidades Adicionais
 - [ ] Medidas de distância (diâmetro, raio)
